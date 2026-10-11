@@ -1,0 +1,14 @@
+[project]
+name = "fuhx-garena-proxy"
+version = "1.0.0"
+description = "FuHx Garena guest-token forward proxy (Vercel serverless)"
+requires-python = ">=3.12"
+dependencies = []
+
+# Application, not a library — uv-কে package build করতে দিও না
+[tool.uv]
+package = false
+
+# Vercel Python entrypoint (single WSGI app — সব path এই app-এ আসবে)
+[tool.vercel]
+entrypoint = "api.index:app"
